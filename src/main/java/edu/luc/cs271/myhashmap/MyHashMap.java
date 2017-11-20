@@ -138,8 +138,9 @@ public void putAll(final Map<? extends K, ? extends V> m) {
 @Override
 public void clear() {
   // TODO clear each chain
-
-
+  for (int i = 0; i < DEFAULT_TABLE_SIZE; i++){
+      table.get(i).clear();
+    }
 }
 
 /** The resulting keySet is not "backed" by the Map, so we keep it unmodifiable. */
