@@ -134,14 +134,9 @@ public V remove(final Object key) {
 @Override
 public void putAll(final Map<? extends K, ? extends V> m) {
   //  add each entry in m's entrySet
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
-        final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
-
-        while (currChain.hasNext()) {
-            final Entry<K, V> entry = currChain.next();
-
-        }
-
+    for (Map.Entry<? extends K, ? extends V> entry : m.entrySet()) {
+        // m.put(entry.getKey(), entry.getValue());
+        this.put(entry.getKey(), entry.getValue());
     }
 }
 
