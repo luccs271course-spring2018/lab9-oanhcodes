@@ -33,7 +33,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
     // Done add the sizes of all the chains
     int result = 0;
 
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
+    for (int i = 0; i < table.size(); i++) {
       result += table.get(i).size();
     }
 
@@ -65,7 +65,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
   public boolean containsValue(final Object value) {
     // Done follow basic approach of remove below (though this will be much simpler)
 
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
+    for (int i = 0; i < table.size(); i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
 
       while (currChain.hasNext()) {
@@ -143,7 +143,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
   @Override
   public void clear() {
     // Done clear each chain
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
+    for (int i = 0; i < table.size(); i++) {
       table.get(i).clear();
     }
   }
@@ -153,7 +153,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
   public Set<K> keySet() {
     final Set<K> result = new HashSet<>();
     // Done populate the set
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
+    for (int i = 0; i < table.size(); i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
       while (currChain.hasNext()) {
         final Entry<K, V> entry = currChain.next();
@@ -169,7 +169,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
   public Collection<V> values() {
     final List<V> result = new LinkedList<>();
     // Done populate the list
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
+    for (int i = 0; i < table.size(); i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
       while (currChain.hasNext()) {
         final Entry<K, V> entry = currChain.next();
@@ -185,7 +185,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
     final Set<Entry<K, V>> result = new HashSet<>();
     // Done populate the set
 
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
+    for (int i = 0; i < table.size(); i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
       while (currChain.hasNext()) {
         final Entry<K, V> entry = currChain.next();

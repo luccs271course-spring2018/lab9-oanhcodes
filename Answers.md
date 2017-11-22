@@ -2,7 +2,7 @@
 
 #### 1. Try using a TreeMap and a HashMap instead of MyHashMap.Are the resulting word frequencies any different?Is the time performance any different? If so, how would you rank the three implementations (in increasing order of time complexity)?
 
-HashMap and TreeMap return the same expected results. With this program, MyHashMap is currently returning different results for each size I test with. The keys have values of 1, so they are not being sorted by words with the most frequency. I believe the resulting word frequencies should be them same, however, I still need to work through my code to figure out why MyHashMap is not returning the words with the greatest frequency first to confirm this.
+HashMap and TreeMap return the same expected results. With this program, MyHashMap is currently returning different key value pairs with values of 1. It is possible the results are not being sorted by words with the most frequency. I believe the resulting word frequencies should be them same, however, I still need to work through my code to figure out why MyHashMap is not returning the words with the greatest frequency first to confirm this.
 
 Hash map is faster than Tree Map. MyHash map takes about the same time as Hashmap for larger tables. MyHashMap takes longer with smaller table sizes.
 
