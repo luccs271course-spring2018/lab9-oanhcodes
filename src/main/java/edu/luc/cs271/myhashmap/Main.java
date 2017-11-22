@@ -12,10 +12,10 @@ public class Main {
     // final Map<String, Integer> counts = new MyHashMap<>(9873);
     // final Map<String, Integer> counts = new MyHashMap<>(4581);
     // final Map<String, Integer> counts = new MyHashMap<>(458133);
-    // final Map<String, Integer> counts = new MyHashMap<>(31);
+    final Map<String, Integer> counts = new MyHashMap<>(31);
 
     // final TreeMap<String, Integer> counts = new TreeMap<String, Integer>();
-    final HashMap<String, Integer> counts = new HashMap<String, Integer>();
+    // final HashMap<String, Integer> counts = new HashMap<String, Integer>();
 
     // a prime number!
 
