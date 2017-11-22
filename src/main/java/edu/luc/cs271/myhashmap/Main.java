@@ -8,7 +8,17 @@ public class Main {
     // set up the scanner so that it separates words based on space and punctuation
     final Scanner input = new Scanner(System.in).useDelimiter("[^\\p{Alnum}]+");
     // TODO measure the performance for MyHashMap, HashMap, and TreeMap several times each!
-    final Map<String, Integer> counts = new MyHashMap<>(6007); // a prime number!
+    // final Map<String, Integer> counts = new MyHashMap<>(6007); // a prime number!
+    // final Map<String, Integer> counts = new MyHashMap<>(9873);
+    // final Map<String, Integer> counts = new MyHashMap<>(4581);
+    // final Map<String, Integer> counts = new MyHashMap<>(458133);
+    // final Map<String, Integer> counts = new MyHashMap<>(31);
+
+    // final TreeMap<String, Integer> counts = new TreeMap<String, Integer>();
+    final HashMap<String, Integer> counts = new HashMap<String, Integer>();
+
+    // a prime number!
+
     final long time0 = System.currentTimeMillis(); // current time
     while (input.hasNext()) {
       final String word = input.next();
